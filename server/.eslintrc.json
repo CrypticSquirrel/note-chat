@@ -1,29 +1,26 @@
 {
-  "env": {
-    "es6": true,
-    "node": true,
-    "mocha": true
-  },
-  "parserOptions": {
-    "ecmaVersion": 2018
-  },
-  "extends": "eslint:recommended",
-  "rules": {
-    "indent": [
-      "error",
-      2
-    ],
-    "linebreak-style": [
-      "error",
-      "unix"
-    ],
-    "quotes": [
-      "error",
-      "single"
-    ],
-    "semi": [
-      "error",
-      "always"
-    ]
-  }
+    "extends": ["airbnb", "prettier", "plugin:node/recommended"],
+    "plugins": ["prettier"],
+    "rules": {
+        "indent": ["error", 4],
+        "space-before-function-paren": 0,
+        "no-console": 0,
+        "func-names": 0,
+        "prettier/prettier": [
+          "error",
+          {
+              "trailingComma": "es5",
+              "singleQuote": true,
+              "printWidth": 100,
+              "tabWidth": 4
+        }
+      ],
+      "no-unused-vars": [
+        1,
+        {
+          "ignoreSiblings": true,
+          "argsIgnorePattern": "res|next|^err"
+        }
+      ]
+    }
 }
